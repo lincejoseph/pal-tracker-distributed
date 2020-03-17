@@ -1,0 +1,11 @@
+.gradle
+build
+.idea
+*.iml
+*.ipr
+*.iws
+.DS_Store
+.env
+ci/variables.yml
+log.txt
+log2.txt
