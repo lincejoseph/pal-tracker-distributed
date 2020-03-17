@@ -17,7 +17,7 @@ jobs:
         run: sudo chmod +x ./gradlew && sudo chmod -R 755 /var/lib/mysql/
       - name: Create test database
         run: |
-          mysql -uroot -proot < databases/create_databases.sql
+          mysql -h 127.0.0.1 -P 3306 -uroot -proot < databases/create_databases.sql
           ./gradlew testMigrate
       - name: Build with Gradle
         run: ./gradlew clean build
