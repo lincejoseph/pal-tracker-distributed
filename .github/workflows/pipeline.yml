@@ -14,7 +14,7 @@ jobs:
         with:
           java-version: 11
       - name: Change gradlew Permission
-        run: sudo chmod +x ./gradlew && /etc/init.d/mysql start
+        run: sudo chmod +x ./gradlew && systemctl status mysql.service
       - name: Create test database
         run: |
           mysql -uroot -proot < databases/create_databases.sql
