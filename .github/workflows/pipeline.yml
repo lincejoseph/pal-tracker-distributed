@@ -14,7 +14,7 @@ jobs:
         with:
           java-version: 11
       - name: Change gradlew Permission
-        run: sudo chmod +x ./gradlew && sudo chmod -R 755 /var/lib/mysql/ && ls -la /var/run/mysqld && mysqladmin -uroot -proot status
+        run: sudo chmod +x ./gradlew && sudo chmod -R 755 /var/lib/mysql/ && ls -la /var/lib/mysql/ && mysqladmin -uroot -proot status
       - name: Create test database
         run: |
           mysql -h 127.0.0.1 -P 3306 -uroot -proot < databases/create_databases.sql
